@@ -13,3 +13,38 @@
  *= require_tree .
  *= require_self
  */
+
+@charset "UTF-8";
+
+@import "normalize.css";
+
+// scss variable
+$primary-color: #6a6a6a;
+$link-color: #007ab7;
+$content-width: 700px;
+
+html, body {
+  background: #fff;
+  height: 100%;
+  color: $primary-color;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 14px;
+  margin: 0px;
+  padding: 0px;
+}
+
+a {
+  color: $link-color;
+  text-decoration: none;
+  &:visited {
+    color: $link-color;
+  }
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
+#container {
+  width: $content-width;
+  margin: 50px auto;
+}
