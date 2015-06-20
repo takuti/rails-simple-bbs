@@ -1,0 +1,9 @@
+<% @posts.each do |post| %>
+  <div class="post">
+    <p class="name"><%= post.name %></p>
+    <p class="email"><%= post.email %></p>
+    <p class="content"><%= post.comment %></p>
+    <p class="time"><%= post.created_at %></p>
+  </div>
+  <hr />
+<% end %>
