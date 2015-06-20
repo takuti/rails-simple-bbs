@@ -1,8 +1,8 @@
 <%= form_for(@new_post) do |f| %>
-  <div class="field">
-    <%= f.label :post %><br>
-    <%= f.text_area :name %>
-    <%= f.text_area :email %>
+  <div class="fields">
+    <label>Name: </label><%= f.text_field :name %>&nbsp;&nbsp;&nbsp;
+    <label>Email: </label><%= f.email_field :email %>
+    <br />
     <%= f.text_area :comment %>
   </div>
   <div class="actions">
@@ -12,9 +12,17 @@
 
 <% @posts.each do |post| %>
   <div class="post">
-    <p class="name"><%= post.name %></p>
-    <p class="email"><%= post.email %></p>
+
+    <p class="name">
+    <% if post.email.empty? %>
+    <%= post.name %>
+    <% else %>
+    <a href="mailto:<%= post.email %>"><%= post.name %></a>
+    <% end %>
+    </p>
+    <hr />
     <p class="content"><%= post.comment %></p>
     <p class="time"><%= post.created_at %></p>
+
   </div>
 <% end %>

@@ -7,8 +7,45 @@
 $primary-color: #6a6a6a;
 $sub-color: #dadada;
 
+.fields {
+  label {
+    font-weight: bold;
+  }
+  textarea, input {
+    border: 1px $sub-color solid;
+    outline: none;
+  }
+  textarea {
+    padding: 0;
+    margin: 1em 0;
+    width: 100%;
+    max-width: 100%;
+    height: 7em;
+  }
+}
+
+.actions {
+  input[type="submit"] {
+    border: none;
+    width: 100%;
+    outline: none;
+  }
+}
+
 .post {
   border: 1px $sub-color solid;
   margin: 1em 0;
-  padding: 1em;
+  padding: .5em 1em;
+  .name {
+    font-weight: bold;
+  }
+  .time {
+    color: $sub-color;
+    text-align: right;
+  }
+  hr {
+    border-width: 1px 0 0 0;
+    border-color: $sub-color;
+    border-style: solid;
+  }
 }
