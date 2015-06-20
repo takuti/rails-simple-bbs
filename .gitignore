@@ -11,3 +11,7 @@
 /log/*
 !/log/.keep
 /tmp
+
+# User defined ignore files
+.*.swp
+.DS_Store
