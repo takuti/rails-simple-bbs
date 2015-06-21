@@ -51,6 +51,11 @@ $success-color: #81d674;
   }
 }
 
+nav.pagination {
+  margin: 1em;
+  text-align: center;
+}
+
 .post {
   border: 1px $sub-color solid;
   margin: 1em 0;
