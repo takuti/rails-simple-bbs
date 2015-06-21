@@ -40,7 +40,7 @@
     <% end %>
     </p>
     <hr />
-    <p class="content"><%= post.comment %></p>
+    <p class="content"><%= simple_format(post.comment) %></p>
     <p class="time"><%= post.created_at %></p>
 
   </div>
