@@ -24,6 +24,11 @@ $success-color: #81d674;
 }
 
 .fields {
+  input[type="submit"] {
+    width: 100px;
+    border: none;
+    outline: none;
+  }
   label {
     font-weight: bold;
   }
@@ -40,14 +45,6 @@ $success-color: #81d674;
   }
   .field_with_errors {
     display: inline;
-  }
-}
-
-.actions {
-  input[type="submit"] {
-    border: none;
-    width: 100%;
-    outline: none;
   }
 }
 
