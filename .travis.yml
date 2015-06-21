@@ -1,0 +1,16 @@
+language: ruby
+
+rvm:
+  - 2.0.0
+
+bundler_args: --without development --deployment
+
+cache: bundler
+
+before_script:
+  - mysql -e 'create database myapp_test;'
+  - bundle exec rake db:migrate
+  - bundle exec rake db:seed
+
+#script:
+#  - bundle exec rspec spec
