@@ -52,6 +52,7 @@ test:
 #
 production:
   <<: *default
-  database: simple_bbs_production
-  username: user_production
-  password: pass_production
+  username: be86971b31b967
+  password: d84b071c
+  host: us-cdbr-iron-east-02.cleardb.net
+  database: heroku_d0231db9c1cf75a
