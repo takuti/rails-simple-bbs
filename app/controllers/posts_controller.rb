@@ -6,9 +6,13 @@ class PostsController < ApplicationController
   end
 
   def create
-    @post = Post.new(post_params)
-    @post.save
-    redirect_to '/'
+    @new_post = Post.new(post_params)
+    if @new_post.save
+      redirect_to '/', notice: 'Successfully posted!'
+    else
+      @posts = Post.all
+      render 'index'
+    end
   end
 
   private
